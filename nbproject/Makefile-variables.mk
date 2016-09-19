@@ -15,13 +15,13 @@ CND_PACKAGE_DIR_Debug=dist/Debug/cygwin2-Windows/package
 CND_PACKAGE_NAME_Debug=sudoku.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/cygwin2-Windows/package/sudoku.tar
 # Release configuration
-CND_PLATFORM_Release=Unknown-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/Unknown-Windows
+CND_PLATFORM_Release=Cygwin-Windows
+CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
 CND_ARTIFACT_NAME_Release=sudoku
-CND_ARTIFACT_PATH_Release=dist/Release/Unknown-Windows/sudoku
-CND_PACKAGE_DIR_Release=dist/Release/Unknown-Windows/package
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/sudoku
+CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
 CND_PACKAGE_NAME_Release=sudoku.tar
-CND_PACKAGE_PATH_Release=dist/Release/Unknown-Windows/package/sudoku.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/sudoku.tar
 #
 # include compiler specific variables
 #
