@@ -38,7 +38,7 @@ int HAUTEUR = -1 ;                         // hauteur de l'Ã©cran en pixels
 // ouvrir une fenÃªtre de taille largeur (x), hauteur (y)
 void ouvrir_fenetre(int largeur, int hauteur){
     SDL_Init(SDL_INIT_VIDEO); 
-    ecran = SDL_SetVideoMode(largeur, hauteur, 32, SDL_HWSURFACE ); 
+    ecran = SDL_SetVideoMode(largeur, hauteur, 32, SDL_SWSURFACE ); 
 
     //initialisation des variables globales
     LARGEUR = largeur ;
@@ -80,7 +80,7 @@ void actualiser(){
 
 // fonction de dessin principale
 // changer la Couleur du Point pix
-void changer_pixel(Point pix, Couleur Couleur) {
+void changer_pixel(Point pix, COULEUR Couleur) {
     if ((0 <= pix.x) && (pix.x < LARGEUR) && (0 <= pix.y ) && (pix.y < HAUTEUR))
     {
         *( (Uint32*)ecran->pixels + pix.y * largeur_ecran + pix.x ) = Couleur ;
@@ -90,7 +90,7 @@ void changer_pixel(Point pix, Couleur Couleur) {
 
 // dessine un rectangle de Couleur de largeur et hauteur donnÃ©es
 // coin est le coin haut, gauche
-void dessiner_rectangle(Point coin, int largeur, int hauteur, Couleur Couleur) {
+void dessiner_rectangle(Point coin, int largeur, int hauteur, COULEUR Couleur) {
     Point p ;
     int bord_droit = coin.x + largeur ;
     int bord_bas = coin.y + hauteur ;
@@ -103,7 +103,7 @@ void dessiner_rectangle(Point coin, int largeur, int hauteur, Couleur Couleur) {
 
 // trace une ligne du Point p1 au point p2 dela Couleur donnÃ©e
 // utilise l'algorithme de Bresenham
-void dessiner_ligne(Point p1, Point p2, Couleur Couleur)
+void dessiner_ligne(Point p1, Point p2, COULEUR Couleur)
 {
     // signes deplacement x et y
     int dx, dy ;
@@ -238,9 +238,9 @@ Point attendre_clic() {
 
 // renvoie une Couleur (UInt32) RGB avec les valeurs entre 0 et 255 donnÃ©es
 // en rouge r, vert g et bleu b
-Couleur fabrique_Couleur(int r, int g, int b)
+COULEUR fabrique_Couleur(int r, int g, int b)
 {
-    Couleur C;
+    COULEUR C;
     return ((r%256)<<16) + ((g%256)<<8) + (b%256);
     return C;
 }

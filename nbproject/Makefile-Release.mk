@@ -21,7 +21,7 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=Cygwin-Windows
+CND_PLATFORM=cygwin2-Windows
 CND_DLIB_EXT=dll
 CND_CONF=Release
 CND_DISTDIR=dist
@@ -35,7 +35,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/libgraphique.o \
 	${OBJECTDIR}/libgraphique.o \
 	${OBJECTDIR}/main.o
 
@@ -69,10 +68,10 @@ ${OBJECTDIR}/libgraphique.o: libgraphique.c
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/libgraphique.o libgraphique.c
 
-${OBJECTDIR}/libgraphique.o: libgraphique.h 
+${OBJECTDIR}/libgraphique.h.gch: libgraphique.h 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/libgraphique.o libgraphique.h
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o "$@" libgraphique.h
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}

@@ -36,7 +36,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/libgraphique.o \
-	${OBJECTDIR}/libgraphique.o \
 	${OBJECTDIR}/main.o
 
 
@@ -54,7 +53,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-L\"../../../../../Program\ Files\ \(x86\)/NetBeans\ 8.1/SDL2-2.0.4/lib\" -lSDL2
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -67,17 +66,17 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/sudoku.exe: ${OBJECTFILES}
 ${OBJECTDIR}/libgraphique.o: libgraphique.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/libgraphique.o libgraphique.c
+	$(COMPILE.c) -g -I../../../../../Program\ Files\ \(x86\)/NetBeans\ 8.1/SDL2-2.0.4/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/libgraphique.o libgraphique.c
 
-${OBJECTDIR}/libgraphique.o: libgraphique.h 
+${OBJECTDIR}/libgraphique.h.gch: libgraphique.h 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/libgraphique.o libgraphique.h
+	$(COMPILE.c) -g -I../../../../../Program\ Files\ \(x86\)/NetBeans\ 8.1/SDL2-2.0.4/include -MMD -MP -MF "$@.d" -o "$@" libgraphique.h
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g -I../../../../../Program\ Files\ \(x86\)/NetBeans\ 8.1/SDL2-2.0.4/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
 # Subprojects
 .build-subprojects:

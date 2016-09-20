@@ -37,6 +37,24 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <incDir>
+            <pElem>../../../../../Program Files (x86)/NetBeans 8.1/SDL2-2.0.4/include</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>../../../../../Program Files (x86)/NetBeans 8.1/SDL2-2.0.4/include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>"../../../../../Program Files (x86)/NetBeans 8.1/SDL2-2.0.4/lib"</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>SDL2</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <item path="libgraphique.c" ex="false" tool="0" flavor2="0">
       </item>
