@@ -35,7 +35,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/libgraphique.o \
 	${OBJECTDIR}/main.o
 
 
@@ -62,16 +61,6 @@ LDLIBSOPTIONS=-L\"../../../../../Program\ Files\ \(x86\)/NetBeans\ 8.1/SDL2-2.0.
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/sudoku.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/sudoku ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/libgraphique.o: libgraphique.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -I../../../../../Program\ Files\ \(x86\)/NetBeans\ 8.1/SDL2-2.0.4/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/libgraphique.o libgraphique.c
-
-${OBJECTDIR}/libgraphique.h.gch: libgraphique.h 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -I../../../../../Program\ Files\ \(x86\)/NetBeans\ 8.1/SDL2-2.0.4/include -MMD -MP -MF "$@.d" -o "$@" libgraphique.h
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}

@@ -13,12 +13,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <SDL.h>
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-    printf("test");
+    //printf("test");
     return (EXIT_SUCCESS);
 }
 
